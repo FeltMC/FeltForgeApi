@@ -1,0 +1,684 @@
+{
+	"schemaVersion": 1,
+	"id": "feltforge",
+	"version": "${version}",
+	"name": "FeltForge",
+	"description": "(Neo)Forge on Fabric",
+	"authors": [
+		"FeltMC",
+		"MinecraftForge",
+		"NeoForge",
+		"Fabricators of Create (PortingLib)"
+	],
+	"contributors": [
+		"unix-supremacist",
+		"Nolij (@xdMatthewbx#1337)",
+		"PseudoDistant",
+		"Trinsdar",
+		"catcore"
+	],
+	"contact": {
+		"homepage": "https://feltmc.net/",
+		"sources": "https://github.com/FeltMC/FeltForgeApi"
+	},
+	"license": "LGPL-2.1",
+	"icon": "assets/feltforge/icon.png",
+	"environment": "*",
+	"mixins": [
+		"neoforge.mixins.json"
+	],
+	"accessWidener" : "feltforge.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_350": [
+				"net/feltmc/neoforge/patches/interfaces/AbstractSelectionListInterface"
+			],
+			"net/minecraft/class_287": [
+				"net/feltmc/neoforge/patches/interfaces/BufferBuilderInterface"
+			],
+			"net/minecraft/class_2535": [
+				"net/feltmc/neoforge/patches/interfaces/ConnectionInterface"
+			],
+			"net/minecraft/class_4587": [
+				"net/minecraftforge/client/extensions/IForgePoseStack"
+			],
+			"net/minecraft/class_6885": [
+				"net/minecraftforge/common/extensions/IForgeHolderSet"
+			],
+			"net/minecraft/class_276": [
+				"net/feltmc/neoforge/patches/interfaces/RenderTargetInterface"
+			],
+			"net/minecraft/class_2658": [
+				"net/minecraftforge/network/ICustomPacket"
+			],
+			"net/minecraft/class_2899": [
+				"net/minecraftforge/network/ICustomPacket"
+			],
+			"net/minecraft/class_2817": [
+				"net/minecraftforge/network/ICustomPacket"
+			],
+			"net/minecraft/class_2913": [
+				"net/minecraftforge/network/ICustomPacket"
+			],
+			"net/minecraft/class_1087": [
+				"net/minecraftforge/client/extensions/IForgeBakedModel"
+			],
+			"net/minecraft/class_3611": [
+				"net/minecraftforge/common/extensions/IForgeFluid"
+			],
+			"net/minecraft/class_2680": [
+				"net/minecraftforge/common/extensions/IForgeBlockState"
+			],
+			"net/minecraft/class_7877": [
+				"net/feltmc/neoforge/patches/interfaces/RegistrySetBuilderInterface"
+			],
+			"net/minecraft/class_2370": [
+				"net/feltmc/neoforge/patches/interfaces/MappedRegistryInterface"
+			],
+			"net/minecraft/class_6880": [
+				"net/feltmc/neoforge/patches/interfaces/HolderInterface"
+			],
+			"net/minecraft/class_6880$class_6883": [
+				"net/feltmc/neoforge/patches/interfaces/Holder$ReferenceInterface"
+			],
+			"net/minecraft/class_2960": [
+				"net/feltmc/neoforge/patches/interfaces/ResourceLocationInterface"
+			],
+			"net/minecraft/class_1921": [
+				"net/feltmc/neoforge/patches/interfaces/RenderTypeInterface"
+			],
+			"net/minecraft/class_2403": [
+				"net/feltmc/neoforge/patches/interfaces/DataGeneratorInterface"
+			],
+			"net/minecraft/class_2889": [
+				"net/feltmc/neoforge/patches/interfaces/ClientIntentionPacketInterface"
+			],
+			"net/minecraft/class_5359": [
+				"net/feltmc/neoforge/patches/interfaces/DataPackConfigInterface"
+			],
+			"net/minecraft/class_3283": [
+				"net/feltmc/neoforge/patches/interfaces/PackRepositoryInterface"
+			],
+			"net/minecraft/class_4590": [
+				"net/minecraftforge/common/extensions/IForgeTransformation"
+			],
+			"net/minecraft/class_4588": [
+				"net/minecraftforge/client/extensions/IForgeVertexConsumer"
+			],
+			"net/minecraft/class_3610": [
+				"net/minecraftforge/common/extensions/IForgeFluidState"
+			],
+			"net/minecraft/class_1887": [
+				"net/minecraftforge/common/extensions/IForgeEnchantment",
+				"net/feltmc/neoforge/patches/interfaces/EnchantmentInterface"
+			],
+			"net/minecraft/class_1657": [
+				"net/minecraftforge/common/extensions/IForgePlayer"
+			],
+			"net/minecraft/class_2168": [
+				"net/minecraftforge/common/extensions/IForgeCommandSourceStack"
+			],
+			"net/minecraft/class_2388": [
+				"net/feltmc/neoforge/patches/interfaces/BlockParticleOptionInterface"
+			],
+			"net/minecraft/class_2505": [
+				"net/feltmc/neoforge/patches/interfaces/NbtAccounterInterface"
+			],
+			"net/minecraft/class_3304": [
+				"net/feltmc/neoforge/patches/interfaces/ReloadableResourceManagerInterface"
+			],
+			"net/minecraft/class_4309": [
+				"net/feltmc/neoforge/patches/interfaces/SimpleJsonResourceReloadListenerInterface"
+			],
+			"net/minecraft/class_3497": [
+				"net/feltmc/neoforge/patches/interfaces/TagEntryInterface"
+			],
+			"net/minecraft/class_1842": [
+				"net/minecraftforge/common/extensions/IForgePotion"
+			],
+			"net/minecraft/class_1744": [
+				"net/feltmc/neoforge/patches/interfaces/ArrowItemInterface"
+			],
+			"net/minecraft/class_5633": [
+				"net/minecraftforge/common/extensions/IForgeDispensibleContainerItem"
+			],
+			"net/minecraft/class_2263": [
+				"net/minecraftforge/common/extensions/IForgeBucketPickup"
+			],
+			"net/minecraft/class_2311": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2397": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2476": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2526": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2560": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2881": [
+				"net/feltmc/neoforge/patches/interfaces/EndDragonFightInterface"
+			],
+			"net/minecraft/class_1946": [
+				"net/minecraftforge/common/util/ITeleporter"
+			],
+			"net/minecraft/class_20": [
+				"net/feltmc/neoforge/patches/interfaces/MapDecorationInterface"
+			],
+			"net/minecraft/class_34": [
+				"net/feltmc/neoforge/patches/interfaces/LevelSummaryInterface"
+            ],
+            "net/minecraft/class_329": [
+              "net/feltmc/neoforge/patches/interfaces/GuiInterface"
+            ],
+            "net/minecraft/class_161$class_162": [
+              "net/minecraftforge/common/extensions/IForgeAdvancementBuilder"
+            ],
+            "net/minecraft/class_332": [
+              "net/minecraftforge/client/extensions/IForgeGuiGraphics",
+              "net/feltmc/neoforge/patches/interfaces/GuiGraphicsInterface"
+            ],
+			"net/minecraft/class_339": [
+				"net/minecraftforge/client/extensions/IAbstractWidgetExtension",
+				"net/feltmc/neoforge/patches/interfaces/AbstractWidgetInterface"
+			],
+			"net/minecraft/class_4185$class_7840": [
+				"net/feltmc/neoforge/patches/interfaces/Button$BuilderInterface"
+			],
+			"net/minecraft/class_437": [
+				"net/feltmc/neoforge/patches/interfaces/ScreenInterface"
+			],
+			"net/minecraft/class_310": [
+				"net/minecraftforge/client/extensions/IForgeMinecraft"
+			],
+			"net/minecraft/class_1814": [
+				"net/minecraftforge/common/IExtensibleEnum"
+			],
+			"net/minecraft/class_465": [
+				"net/feltmc/neoforge/patches/interfaces/AbstractContainerScreenInterface"
+			],
+			"net/minecraft/class_481": [
+				"net/feltmc/neoforge/patches/interfaces/CreativeModeInventoryScreenInterface"
+			],
+			"net/minecraft/class_481$class_484": [
+				"net/feltmc/neoforge/patches/interfaces/CreativeModeInventoryScreen$SlotWrapperInterface"
+			],
+			"net/minecraft/class_1922": [
+				"net/minecraftforge/common/extensions/IForgeBlockGetter"
+			],
+			"net/minecraft/class_304": [
+				"net/minecraftforge/client/extensions/IForgeKeyMapping"
+			],
+			"net/minecraft/class_5369$class_5371": [
+				"net/feltmc/neoforge/patches/interfaces/PackSelectionModelInterface$EntryInterface"
+			],
+			"net/minecraft/class_7193": [
+				"net/feltmc/neoforge/patches/interfaces/WorldCreationContextInterface"
+			],
+			"net/minecraft/class_3262": [
+				"net/minecraftforge/common/extensions/IForgePackResources"
+			],
+			"net/minecraft/class_1799": [
+				"net/minecraftforge/common/extensions/IForgeItemStack"
+			],
+			"net/minecraft/class_1792": [
+				"net/minecraftforge/common/extensions/IForgeItem",
+				"net/feltmc/neoforge/patches/interfaces/ItemInterface"
+			]
+		},
+		"felt-spindle:overlays": {
+			"net/minecraft/class_2350": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "getNearestStable(FFF)Lnet/minecraft/class_2350;"
+				}
+			],
+			"net/minecraft/class_1814": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getStyleModifier()Ljava/util/function/UnaryOperator;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Ljava/lang/String;Lnet/minecraft/class_124;)Lnet/minecraft/class_1814;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/minecraft/class_1814;"
+				}
+			],
+			"net/minecraft/class_454": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_310;Lnet/minecraft/class_457;Lnet/minecraft/class_453;IILnet/minecraft/class_161;Lnet/minecraft/class_185;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getPage()I"
+				}
+			],
+			"net/minecraft/class_453": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "MAX_TABS:I"
+				}
+			],
+			"net/minecraft/class_2370": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "getKnownRegistries()Ljava/util/Set;"
+				}
+			],
+			"net/minecraft/class_7887": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "DATAPACK_REGISTRY_KEYS:Ljava/util/List;"
+				}
+			],
+			"com/mojang/blaze3d/platform/GlStateManager": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "lastBrightnessX:F"
+				},
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "lastBrightnessY:F"
+				}
+			],
+			"net/minecraft/class_8005": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "isVisible(Lnet/minecraft/class_161;Ljava/util/function/Predicate;)Z"
+				}
+			],
+			"net/minecraft/class_3481": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Lnet/minecraft/class_2960;)Lnet/minecraft/class_6862;"
+				}
+			],
+			"net/minecraft/class_3486": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Lnet/minecraft/class_2960;)Lnet/minecraft/class_6862;"
+				}
+			],
+			"net/minecraft/class_3489": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Lnet/minecraft/class_2960;)Lnet/minecraft/class_6862;"
+				}
+			],
+			"net/minecraft/class_4185": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_4185$class_7840;)V"
+				}
+			],
+			"net/minecraft/class_7458": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_7784;Ljava/util/concurrent/CompletableFuture;Ljava/lang/String;Lnet/minecraftforge/common/data/ExistingFileHelper;)V"
+				}
+			],
+			"net/minecraft/class_1886": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Ljava/lang/String;Ljava/util/function/Predicate;)Lnet/minecraft/class_1886;"
+				}
+			],
+			"net/minecraft/class_1927": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getPosition()Lnet/minecraft/class_243;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getExploder()Lnet/minecraft/class_1297;"
+				}
+			],
+			"net/minecraft/class_1917": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getSpawnerEntity()Lnet/minecraft/class_1297;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getSpawnerBlockEntity()Lnet/minecraft/class_2586;"
+				}
+			],
+			"net/minecraft/class_31": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "hasConfirmedExperimentalWarning()Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "withConfirmedWarning(Z)Lnet/minecraft/class_31;"
+				}
+			],
+			"net/minecraft/class_1940": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraft/class_1934;ZLnet/minecraft/class_1267;ZLnet/minecraft/class_1928;Lnet/minecraft/class_7712;Lcom/mojang/serialization/Lifecycle;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "withLifecycle(Lcom/mojang/serialization/Lifecycle;)Lnet/minecraft/class_1940;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getLifecycle()Lcom/mojang/serialization/Lifecycle;"
+				}
+			],
+			"net/minecraft/class_3929": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "getScreenFactory(Lnet/minecraft/class_3917;Lnet/minecraft/class_310;ILnet/minecraft/class_2561;)Ljava/util/Optional;"
+				}
+			],
+			"net/minecraft/class_465": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "renderSlotHighlight(Lnet/minecraft/class_332;IIII)V"
+				},
+				{
+					"type": "field",
+					"visibility": "protected",
+					"static": false,
+					"signature": "slotColor:I"
+				}
+			],
+			"net/minecraft/class_490": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "renderEntityInInventoryFollowsAngle(Lnet/minecraft/class_332;IIIFFLnet/minecraft/class_1309;)V"
+				}
+			],
+			"net/minecraft/class_8002": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "renderTooltipBackground(Lnet/minecraft/class_332;IIIIIIIII)V"
+				}
+			],
+			"net/minecraft/class_32$class_5143": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "readAdditionalLevelSaveData()V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getWorldDir()Ljava/nio/file/Path;"
+				}
+			],
+			"net/minecraft/class_129": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "applyStackTrace(Ljava/lang/Throwable;)V"
+				}
+			],
+			"net/minecraft/class_304": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILjava/lang/String;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lcom/mojang/blaze3d/platform/InputConstants$Key;Ljava/lang/String;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lnet/minecraftforge/client/settings/KeyModifier;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILjava/lang/String;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lnet/minecraftforge/client/settings/KeyModifier;Lcom/mojang/blaze3d/platform/InputConstants$Key;Ljava/lang/String;)V"
+				}
+			],
+			"net/minecraft/class_1735": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getSlotIndex()I"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "isSameInventory(Lnet/minecraft/class_1735;)Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "setBackground(Lnet/minecraft/class_2960;Lnet/minecraft/class_2960;)Lnet/minecraft/class_1735;"
+				}
+			],
+			"net/minecraft/class_528": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "FORGE_EXPERIMENTAL_WARNING_ICON:Lnet/minecraft/class_2960;"
+				}
+			],
+			"net/minecraft/class_1729": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getRecipeBookCategories()Ljava/util/List;"
+				}
+			],
+			"net/minecraft/class_3288": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "isHidden()Z"
+				}
+			],
+			"net/minecraft/class_3288$class_7679": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "dataFormat:I"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "dataFormat()I"
+				},
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "resourceFormat:I"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "resourceFormat()I"
+				},
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "hidden:Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "hidden()Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_2561;IILnet/minecraft/class_7699;Z)V"
+				}
+			],
+			"net/minecraft/class_3272": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_2561;ILjava/util/Map;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getPackFormat(Lnet/minecraft/class_3264;)I"
+				}
+			],
+			"net/minecraft/class_1799": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_1935;ILnet/minecraft/class_2487;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "onItemUseFirst(Lnet/minecraft/class_1838;)Lnet/minecraft/class_1269;"
+				},
+				{
+					"type": "method",
+					"visibility": "private",
+					"static": false,
+					"signature": "onItemUse(Lnet/minecraft/class_1838;Ljava/util/function/Function;)Lnet/minecraft/class_1269;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "deserializeNBT(Lnet/minecraft/class_2487;)V"
+				}
+			],
+			"net/minecraft/class_638": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "partEntities:Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;"
+				}
+			],
+			"net/minecraft/class_1792": [
+				{
+					"type": "field",
+					"visibility": "protected",
+					"static": false,
+					"signature": "canRepair:Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getRenderPropertiesInternal()Ljava/lang/Object;"
+				}
+			],
+			"net/minecraft/class_1792$class_1793": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "canRepair:Z"
+				}
+			]
+		}
+	}
+}
